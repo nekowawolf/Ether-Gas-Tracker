@@ -8,6 +8,7 @@
     "dev": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch"
   },
   "dependencies": {
+    "axios": "^1.6.8",
     "ethers": "^6.11.1"
   }
 }
