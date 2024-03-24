@@ -7,3 +7,6 @@ fetch("https://api.etherscan.io/api?module=gastracker&action=gasestimate&gaspric
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
+
+  
+
