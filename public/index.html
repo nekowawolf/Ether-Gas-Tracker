@@ -6,22 +6,11 @@
     <title>Ether Gas Tracker </title>
     <link rel="shortcut icon" href="/public/img/ethgas.png">
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style2.css" />
 </head>
 <body>
-    <svg class="absolute bottom-0" viewBox="0 0 1425 205.55" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g>
-        <path d="M0,17.27l23.75,5.09C47.5,27.38,95,37.57,142.5,39.47s95-4.36,142.5-10.28,95-11.35,142.5-7.4,95,17.43,142.5,24,95,6.25,142.5,5.83,95-.9,142.5-3S950,43,997.5,42.92s95,3.12,142.5,2.88,95-4.11,142.5-3.62,95,5.51,118.75,8L1425,52.62v170.2H0Z" fill="#FFCAD7"></path>
-        <path d="M0,94.56l23.75-6.17C47.5,82.22,95,69.89,142.5,65.2s95-1.64,142.5,4.85S380,86.33,427.5,86.5,522.5,77,570,73.59s95-.66,142.5,1.81,95,4.6,142.5,3.78,95-4.6,142.5-6.58,95-1.89,142.5,1.24,95,9.45,142.5,13.15,95,4.85,118.75,5.35l23.75.57V222.82H0Z" fill="#FF7D9D"></path>
-        <path d="M0,134,23.75,132C47.5,129.91,95,125.8,142.5,125.39s95,2.88,142.5,5.75,95,5.35,142.5,4,95-6.58,142.5-8.06,95,.66,142.5-.41,95-5.51,142.5-9.21,95-6.66,142.5-5.83,95,5.42,142.5,9.86,95,8.47,142.5,9.05,95-2.47,118.75-4L1425,125v97.84H0Z" fill="#FF3366"></path>
-        <path d="M0,178.42l23.75-1.64c23.75-1.65,71.25-4.94,118.75-5.59s95,1.23,142.5,2.71,95,2.63,142.5,4.11,95,3.45,142.5,2.88,95-3.54,142.5-8.8,95-12.58,142.5-13.57,95,4.53,142.5,8.23,95,5.67,142.5,4,95-6.91,142.5-9.79,95-3.37,118.75-3.7L1425,157v65.78H0Z" fill="#27272a"></path>
-      </g>
-      <defs>
-        <clipPath id="clip0"><rect width="1425" height="444" fill="white"></rect></clipPath>
-      </defs>
-    </svg>
-  </div>
     <div class="">
-    <h1 class=" mt-24 text-black-500 text-center text-4xl font-bold" >Gas Tracker</h1>
+    <h1 class=" mt-11 text-black-500 text-center text-4xl font-bold" >Gas Tracker</h1>
     <p class="text-center text-black text-1xl mt-3">WELCOME TO ETHER GAS TRACKER ⛽</p>
     <p class="text-center text-sm mt-2">
         created by
@@ -29,30 +18,43 @@
           <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="nekowawolf" class="inline-block w-6 h-6">
         </a>
       </p>  
-      <div class="mt-20 flex flex-col sm:flex-row justify-center">
-        <div class="max-w-sm rounded overflow-hidden shadow-lg mx-2 mb-4 sm:mb-0">
+      <div class="mt-12 flex flex-col sm:flex-row justify-center items-center">
+        <div class="max-w-xs rounded overflow-hidden shadow-lg mx-4 my-4">
+          <img class="" src="/public/img/low.jpg" alt="">
           <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">17 gwei</div>
-            <p class="text-gray-700 text-base">Base: 16 | Priority: 1
-                $1.13 | ~ 30 secs</p>
+            <h1 class="font-bold text-xl mb-2 text-green-600 text-center">Low</h1>
+            <h1 id="safeGasPrice" class="font-bold text-sm mb-2 text-black text-center"> </h1>
           </div>
         </div>
-        <div class="max-w-sm rounded overflow-hidden shadow-lg mx-2 mb-4 sm:mb-0">
+        <div class="max-w-xs rounded overflow-hidden shadow-lg mx-4 my-4">
+          <img class="" src="/public/img/average.png" alt="">
           <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">18 gwei</div>
-            <p class="text-gray-700 text-base">Base: 18 | Priority: 1
-                $1.13 | ~ 30 secs</p>
+            <h1 class="font-bold text-xl mb-2 text-yellow-600 text-center">Average</h1>
+            <h1 id="proposeGasPrice" class="font-bold text-sm mb-2 text-black text-center"> </h1>
           </div>
         </div>
-        <div class="max-w-sm rounded overflow-hidden shadow-lg mx-2 mb-4 sm:mb-0">
+        <div class="max-w-xs rounded overflow-hidden shadow-lg mx-4 my-4">
+          <img class="" src="/public/img/high.png" alt="">
           <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">19 gwei</div>
-            <p class="text-gray-700 text-base">Base: 15 | Priority: 4
-                $1.13 | ~ 30 secs</p>
+            <h1 class="font-bold text-xl mb-2 text-red-600 text-center">High</h1>
+            <h1 id="fastGasPrice" class="font-bold text-sm mb-2 text-black text-center"> </h1>
           </div>
         </div>
+      </div>      
+      <div class="svg-container">
+        <svg viewBox=" 0 0 1425 205.55" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path d="M0,17.27l23.75,5.09C47.5,27.38,95,37.57,142.5,39.47s95-4.36,142.5-10.28,95-11.35,142.5-7.4,95,17.43,142.5,24,95,6.25,142.5,5.83,95-.9,142.5-3S950,43,997.5,42.92s95,3.12,142.5,2.88,95-4.11,142.5-3.62,95,5.51,118.75,8L1425,52.62v170.2H0Z" fill="#FFCAD7"></path>
+            <path d="M0,94.56l23.75-6.17C47.5,82.22,95,69.89,142.5,65.2s95-1.64,142.5,4.85S380,86.33,427.5,86.5,522.5,77,570,73.59s95-.66,142.5,1.81,95,4.6,142.5,3.78,95-4.6,142.5-6.58,95-1.89,142.5,1.24,95,9.45,142.5,13.15,95,4.85,118.75,5.35l23.75.57V222.82H0Z" fill="#FF7D9D"></path>
+            <path d="M0,134,23.75,132C47.5,129.91,95,125.8,142.5,125.39s95,2.88,142.5,5.75,95,5.35,142.5,4,95-6.58,142.5-8.06,95,.66,142.5-.41,95-5.51,142.5-9.21,95-6.66,142.5-5.83,95,5.42,142.5,9.86,95,8.47,142.5,9.05,95-2.47,118.75-4L1425,125v97.84H0Z" fill="#FF3366"></path>
+            <path d="M0,178.42l23.75-1.64c23.75-1.65,71.25-4.94,118.75-5.59s95,1.23,142.5,2.71,95,2.63,142.5,4.11,95,3.45,142.5,2.88,95-3.54,142.5-8.8,95-12.58,142.5-13.57,95,4.53,142.5,8.23,95,5.67,142.5,4,95-6.91,142.5-9.79,95-3.37,118.75-3.7L1425,157v65.78H0Z" fill="#27272a"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0"><rect width="1425" height="444" fill="white"></rect></clipPath>
+          </defs>
+        </svg>
       </div>
-    </div>
-    <script src="index.js"></script>
+    </div>   
+    <script src="/public/index.js"></script>
 </body>
 </html>

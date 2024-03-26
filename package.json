@@ -5,12 +5,6 @@
     "tailwindcss": "^3.4.1"
   },
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch",
-    "type": "module"
-  },
-  "dependencies": {
-    "@tatumio/tatum": "^4.2.18",
-    "axios": "^1.6.8",
-    "ethers": "^5.7.0"
+    "dev": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch"
   }
 }
