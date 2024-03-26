@@ -10,9 +10,9 @@ const requestOptions = {
         const proposeGasPrice = data.result.ProposeGasPrice;
         const fastGasPrice = data.result.FastGasPrice;
 
-        document.getElementById('safeGasPrice').innerText = `Gwai : ${safeGasPrice}`;
-        document.getElementById('proposeGasPrice').innerText = `Gwai : ${proposeGasPrice}`;
-        document.getElementById('fastGasPrice').innerText = `Gwai : ${fastGasPrice}`;
+        document.getElementById('safeGasPrice').innerText = `Gwei : ${safeGasPrice}`;
+        document.getElementById('proposeGasPrice').innerText = `Gwei : ${proposeGasPrice}`;
+        document.getElementById('fastGasPrice').innerText = `Gwei : ${fastGasPrice}`;
     })
     .catch(error => console.error('Error fetching gas data:', error));
 
